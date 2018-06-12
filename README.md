@@ -1,4 +1,4 @@
-#Fontastic - A Browser Extension to Avoid Font CDNs
+# Fontastic - A Browser Extension to Avoid Font CDNs
 
 Nowadays, it's very common for websites to use fonts provided by CDNs, such as Google Fonts.
 This can be used to potentially track users who view sites that call these CDNs.
