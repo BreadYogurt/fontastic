@@ -11,7 +11,7 @@ var weightDict = {
 };
 
 function GIconStyle(){
-return "@font-face {\n" + 
+return "@font-face {\n" +
 	  "font-family: 'Material Icons';\n" +
 	  "font-style: normal;\n" +
 	  "font-weight: 400;\n" +
@@ -54,7 +54,7 @@ function degoogleapi(requestDetails) {
 
 	if (fontStr.includes('&'))
 		fontStr = fontStr.slice(0, fontStr.indexOf('&'));
-	
+
 	var fontList = fontStr.split("|");
 	for (var i = 0; i < fontList.length; i++){
 		fontList[i] = fontList[i].split(":");
@@ -76,7 +76,7 @@ function degoogleapi(requestDetails) {
 			var fWeight = sub.replace(/\D/g, "");
 			var fStyle = (sub.includes('i') ? "italic" : "regular");
 			var fSub = getSub(fWeight, sub.includes('i'));
-			var fName = (fFamily + "-" + fSub).replace(/\s/g, ""); 
+			var fName = (fFamily + "-" + fSub).replace(/\s/g, "");
 			styles += "\n@font-face { " +
 				"font-family: \'" + fFamily + "\'; " +
 				"font-style: " + fStyle + "; " +
@@ -97,10 +97,13 @@ function deGIcons(req) {
 	return {cancel: true};
 }
 
+//TODO: Get back to work on intercepting font requests from gstatic, and add back the "webNavigation" permission when ready to do so.
+/**
 function degstatic(req) {
 	browser.webNavigation.getFrame({ tabId: req.tabId, frameId: req.parentFrameId }).then(console.log, console.log);
 	return;
 }
+**/
 
 browser.webRequest.onBeforeRequest.addListener(
 	degoogleapi,
