@@ -116,8 +116,11 @@ browser.webRequest.onBeforeRequest.addListener(
 	{urls:["*://fonts.googleapis.com/icon?family=Material+Icons"], types:["stylesheet", "font"]}, ["blocking"]
 );
 
+//TODO: see line 100
+/**
 browser.webRequest.onBeforeRequest.addListener(
 	degstatic,
 	{urls:["*://fonts.gstatic.com/*"], types:["font"]},
 	["blocking"]
 );
+**/
