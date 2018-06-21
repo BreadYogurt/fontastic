@@ -22,7 +22,7 @@
 
 	"applications": {
 		"gecko": {
-			"id" "fontastic@bread.yogurt"
+			"id": "fontastic@bread.yogurt"
 		}
 	}
 }
